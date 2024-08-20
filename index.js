@@ -22,5 +22,15 @@ const Poker = () => {
   const hand1Container = document.getElementById("hand-1-container");
   const hand2Container = document.getElementById("hand-2-container");
 };
+// *-* public methods *-*
+
+const init = () => {
+  button.addEventListener("click", eventPlayAgainClicked);
+  newPlayerBtn.addEventListener("click", addPlayer);
+  document
+    .getElementById("remove-player")
+    .addEventListener("click", removePlayer);
+  eventPlayAgainClicked();
+};
 
 window.onload = Poker.init;
