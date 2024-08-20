@@ -65,5 +65,19 @@ const get90PercentChancePairIndex = (cards, deck) => {
 
   return deck.findIndex((cardInDeck) => cardsSet.has(cardInDeck.card));
 };
+const generateDeck = () => {
+  const newDeck = [];
+
+  for (const suit of suits) {
+    for (const card of cards) {
+      newDeck.push({
+        suit: suit,
+        card: card,
+      });
+    }
+  }
+
+  return newDeck;
+};
 
 window.onload = Poker.init;
