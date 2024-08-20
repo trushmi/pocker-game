@@ -1,0 +1,90 @@
+body {
+  background-color: #308b5a;
+  color: #fef72c;
+  font-family: Helvetica, sans-serif;
+  margin: 1em 2em;
+}
+h1 {
+  text-shadow: 1px 2px #444;
+}
+
+/* Cards */
+.card {
+  width: 100%;
+  height: auto;
+  transition: all 0.5s;
+}
+
+.finished .card.pair0 {
+  transform: translateY(-20px);
+  outline: 3px dashed red;
+}
+.finished .card.pair1 {
+  transform: translateY(20px);
+  outline: 3px dashed #33f;
+}
+
+@keyframes slidein {
+  0% {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.card-container {
+  width: 80px;
+  margin-left: 1em;
+  animation: ease-in 0.5s forwards slidein;
+}
+
+/* Hands */
+.hand {
+  box-shadow: 4px 4px 6px 4px #444;
+  margin: 4em 0;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 150px;
+}
+.finished .hand.winning {
+  background-color: #44c880;
+  transition: all 0.5s;
+}
+.finished .hand.winning h1:after {
+  content: " Wins!";
+}
+
+.hand-card-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  width: 70%;
+}
+
+.player-label {
+  width: 30%;
+}
+
+/* Button */
+.buttons {
+  text-align: center;
+}
+.buttons button {
+  background-color: #4b1124;
+  border: 4px double #cfb338;
+  box-shadow: 4px 4px 5px #333;
+  color: #eee;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 0.5em 2em;
+}
+.buttons button:active {
+  position: relative;
+  top: 4px;
+  left: 4px;
+  box-shadow: none;
+}
